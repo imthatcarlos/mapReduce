@@ -11,7 +11,7 @@ gives us the uptime of the JVM in seconds and
 
 prints all the threads with stack traces
 
-![Scheme](images/jcmd.png)
+![Scheme](images/jmcd.png)
 
 Running jconsole and selecting the local process main.Main shows information regarding performance and resource consumption of the process.  We can see, for example, how the Heap increases as we interact with the app.
 
