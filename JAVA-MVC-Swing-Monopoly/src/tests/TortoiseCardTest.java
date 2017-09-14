@@ -1,4 +1,4 @@
-package model.card;
+package tests;
 
 import junit.framework.Assert;
 import model.PlayerModel;

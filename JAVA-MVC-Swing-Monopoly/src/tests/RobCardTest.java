@@ -1,9 +1,11 @@
-package model.card;
+package tests;
 
 import context.GameState;
 import control.Control;
 import junit.framework.Assert;
 import model.PlayerModel;
+import model.card.Card;
+import model.card.RobCard;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -23,5 +25,17 @@ public class RobCardTest {
         RobCard rCard = new RobCard(pModel);
         int res = rCard.useCard();
         Assert.assertEquals(res, GameState.CARD_ROB);
+    }
+
+    @Test
+    public void setOwner() throws Exception {
+        Control control = new Control();
+        PlayerModel firstOwner = new PlayerModel(5, control);
+        PlayerModel secondOwner = new PlayerModel(8, control);
+
+        RobCard card = new RobCard(firstOwner);
+        card.setOwner(secondOwner);
+
+        Assert.assertEquals(card.getOwner(), secondOwner);
     }
 }
