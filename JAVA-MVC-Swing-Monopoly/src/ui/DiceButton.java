@@ -46,7 +46,7 @@ public class DiceButton extends JPanel implements MouseListener {
 	}
 
 	public void paint(Graphics g) {
-		this.setOpaque(false); // ±³¾°Í¸Ã÷
+		this.setOpaque(false); // ???????
 		if (enabled){
 			g.drawImage(currentImage, this.getX(), this.getY(), this.getWidth(),
 					this.getHeight(), this);
@@ -62,7 +62,7 @@ public class DiceButton extends JPanel implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 			currentImage = pressedImage;
 			if(enabled){
-				// °´ÏÂ
+				// ????
 				control.pressButton();
 			}
 	}

@@ -15,14 +15,14 @@ import model.buildings.Prison;
 import model.buildings.Shop_;
 
 /**
- * 全局房屋信息
+ * ?????????
  * 
  * @author MOVELIGHTS
  * 
  */
 public class BuildingsModel extends Tick implements Port{
 	/**
-	 * 房屋链表
+	 * ????????
 	 */
 	private List<Building> buildings = null;
 	
@@ -36,26 +36,26 @@ public class BuildingsModel extends Tick implements Port{
 
 	/**
 	 * 
-	 * 初始化房屋
+	 * ?????????
 	 * 
 	 */
 	private void initBuilding() {
-		// 初始化链表
+		// ?????????
 		buildings = new ArrayList<Building>();
-		// 对应地图加入房屋
+		// ????????????
 		int[][] temp = this.land.getLand();
 		for (int i = 0; i < temp.length; i++) {
 			for (int j = 0; j < temp[i].length; j++) {
 				switch (temp[i][j]) {
 				case LandModel.SPACE:
 					Building tempBuidling = new House(i, j);
-					// 设置空地的属性为可以购买的
+					// ???每????????????????
 					tempBuidling.setPurchasability(true);
 					buildings.add(tempBuidling);
 					break;
-				case LandModel.HOSPITAL:// 医院
+				case LandModel.HOSPITAL:// ??
 					buildings.add(new Hospital(i, j));
-					//设置全图医院点
+					//??????????
 					LandModel.hospital = new java.awt.Point(j * 60,i * 60);
 //					System.out.println(LandModel.hospital );
 					break;
@@ -83,9 +83,9 @@ public class BuildingsModel extends Tick implements Port{
 				case LandModel.SHOP:
 					buildings.add(new Shop_(i, j));
 					break;
-				case LandModel.PRISON:// 监狱
+				case LandModel.PRISON:// ????
 					buildings.add(new Prison(i, j));
-					//设置全图监狱点
+					//????????????
 					LandModel.prison = new java.awt.Point(j * 60, i * 60);
 //					System.out.println(LandModel.prison );
 					break;
@@ -98,7 +98,7 @@ public class BuildingsModel extends Tick implements Port{
 
 	/**
 	 * 
-	 * 获得房屋表
+	 * ??梅????
 	 * 
 	 * @return
 	 */
@@ -107,7 +107,7 @@ public class BuildingsModel extends Tick implements Port{
 	}
 	/**
 	 * 
-	 * 获得当前位置房屋
+	 * ??玫????梅???
 	 * 
 	 */
 	public Building getBuilding(int x,int y){
@@ -120,11 +120,11 @@ public class BuildingsModel extends Tick implements Port{
 	}
 	/**
 	 * 
-	 * 开始游戏设置
+	 * ??????????
 	 * 
 	 */
 	public void startGameInit (){
-		// 初始化房屋
+		// ?????????
 		initBuilding();
 	}
 

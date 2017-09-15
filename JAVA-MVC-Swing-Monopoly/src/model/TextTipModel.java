@@ -9,7 +9,7 @@ import control.Control;
 
 /**
  * 
- * 文字提示更新
+ * ???????????
  * 
  * @author MOVELIGHTS
  * 
@@ -18,7 +18,7 @@ public class TextTipModel extends Tick implements Port{
 	
 	private PlayerModel player = null;
 	
-	private String tipString = "游戏开始！谁才是最后的大富翁呢？";
+	private String tipString = "???????????????????????";
 	
 	public TextTipModel (){
 	}
@@ -34,7 +34,7 @@ public class TextTipModel extends Tick implements Port{
 	
 	/**
 	 * 
-	 * 开始游戏设置
+	 * ??????????
 	 * 
 	 */
 	public void startGameInit (){}
@@ -50,7 +50,7 @@ public class TextTipModel extends Tick implements Port{
 	}
 
 	/**
-	 * 显示文字提示
+	 * ??????????
 	 * 
 	 * 
 	 * */

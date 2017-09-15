@@ -35,7 +35,7 @@ public class PlayerInfoButton extends JPanel implements MouseListener {
 	private Control control;
 	
 	public PlayerInfoButton(String name, int x, int y) {
-		this.name = name;//…Ë÷√√˚≥∆
+		this.name = name;//????????
 		this.normalImage = this.img[0];
 		this.rolloverImage = this.img[1];
 		this.pressedImage =this.img[2];
@@ -54,7 +54,7 @@ public class PlayerInfoButton extends JPanel implements MouseListener {
 	}
 
 	public void paint(Graphics g) {
-		this.setOpaque(false); // ±≥æ∞Õ∏√˜
+		this.setOpaque(false); // ???????
 		if (enabled){
 			g.drawImage(currentImage, this.getX(), this.getY(), this.getWidth(),
 					this.getHeight(), this);

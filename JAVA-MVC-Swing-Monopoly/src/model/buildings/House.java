@@ -16,7 +16,7 @@ import util.MyThread;
 
 /**
  * 
- * 居民房 1-5级 平房 店铺 商场 商业大楼 摩天大楼
+ * ???? 1-5?? ??? ???? ??? ?????楼 ????楼
  * 
  * @author MOVELIGHTS
  * 
@@ -24,7 +24,7 @@ import util.MyThread;
 public class House extends Building {
 
 	private int upPrice;
-	private String[] nameString = { "空地", "平房", "店铺", "商场", "商业大楼", "摩天大楼" };
+	private String[] nameString = { "???", "???", "????", "???", "?????楼", "????楼" };
 
 	private PlayerModel player;
 
@@ -44,7 +44,7 @@ public class House extends Building {
 	
 	/**
 	 * 
-	 * 获取房屋总价值
+	 * ???????????
 	 * 
 	 * @return
 	 */
@@ -61,13 +61,13 @@ public class House extends Building {
 	}
 
 	/**
-	 * 税率
+	 * ???
 	 * 
 	 * @return
 	 */
 	public int getRevenue() {
 		/**
-		 * 税率计算方法
+		 * ????????
 		 */
 		this.revenue = this.level * (int) (Math.random() * 1000)
 				+ (this.level * 300);
@@ -79,7 +79,7 @@ public class House extends Building {
 	}
 
 	/**
-	 * 获得上一级名称
+	 * ????????????
 	 * 
 	 * @return
 	 */

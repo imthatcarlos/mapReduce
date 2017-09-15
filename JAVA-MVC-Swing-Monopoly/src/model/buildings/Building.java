@@ -9,7 +9,7 @@ import control.Control;
 
 /**
  * 
- * 房屋抽象类
+ * ?????????
  * 
  * @author MOVELIGHTS
  * 
@@ -17,43 +17,43 @@ import control.Control;
 public class Building{
 	/**
 	 * 
-	 * 房屋拥有者
+	 * ?????????
 	 * 
 	 */
 	protected PlayerModel owner = null;
 
 	/**
-	 * 房屋名称
+	 * ????????
 	 */
 	protected String name;
 
 	/**
-	 * 可购买性
+	 * ???????
 	 */
 	protected boolean purchasability = false;
 
 	/**
-	 * 购买空地的价格
+	 * ?????????
 	 */
 	protected int price;
 	/**
-	 * 税
+	 * ?
 	 */
 	protected int revenue;
 	/**
-	 * 当前房屋等级
+	 * ?????????
 	 */
 	protected int level;
 
 	/**
 	 * 
-	 * 坐标
+	 * ????
 	 * 
 	 */
 	protected int posX;
 	protected int posY;
 	/**
-	 * 最大等级
+	 * ?????
 	 */
 	protected int maxLevel;
 
@@ -72,7 +72,7 @@ public class Building{
 	}
 
 	/**
-	 * 是否可以升级
+	 * ??????????
 	 */
 	public boolean canUpLevel() {
 		return this.level < maxLevel;
@@ -106,7 +106,7 @@ public class Building{
 	}
 	/**
 	 * 
-	 * 获取房屋总价值
+	 * ???????????
 	 * 
 	 */
 	public int getAllPrice() {
@@ -124,12 +124,12 @@ public class Building{
 		return posY;
 	}
 	/**
-	 * 触发事件
+	 * ?????录?
 	 */
 	public int getEvent() { return 0;}
 	
 	/**
-	 * 路过事件
+	 * 路???录?
 	 */
 	public int passEvent() { return 0;}
 	

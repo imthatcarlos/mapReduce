@@ -17,7 +17,7 @@ import model.card.*;
 /**
  * 
  * 
- * 商店模型
+ * ??????
  * 
  * @author MOVELIGHTS
  * 
@@ -26,15 +26,15 @@ public class Shop_ extends Building {
 
 	/**
 	 * 
-	 * 最大商品数量
+	 * ??????????
 	 * 
 	 */
 	public static int MAXITEMSIZE = 9;
 	/**
 	 * 
-	 * 商品货架
+	 * ???????
 	 * <p>
-	 * 最大数量 9
+	 * ??????? 9
 	 * 
 	 */
 	private List<Card> cards = new ArrayList<Card>(MAXITEMSIZE);
@@ -45,7 +45,7 @@ public class Shop_ extends Building {
 
 	public Shop_(int posX, int posY) {
 		super(posX, posY);
-		this.name = "商店";
+		this.name = "???";
 	}
 
 	@Override
@@ -55,13 +55,13 @@ public class Shop_ extends Building {
 
 	/**
 	 * 
-	 * 为商店的货架从新生成商品
+	 * ??????????????????
 	 * 
 	 */
 	public void createCards() {
-		// 清空货架
+		// ??????
 		this.cards = new ArrayList<Card>(MAXITEMSIZE);
-		// 添加新的card
+		// ????碌?card
 		for (int i = 0; i < MAXITEMSIZE; i++) {
 			int random = (int) (Math.random() * 12);
 			switch (random) {

@@ -17,7 +17,7 @@ import util.FileUtil;
 
 /**
  * 
- * 骰子
+ * ????
  * 
  * 
  * @author MOVELIGHTS
@@ -27,7 +27,7 @@ public class DiceModel extends Tick implements Port {
 
 	/**
 	 * 
-	 * 骰子运动
+	 * ???????
 	 * 
 	 */
 	private int point;
@@ -39,7 +39,7 @@ public class DiceModel extends Tick implements Port {
 			new ImageIcon("images/dice/dice_play_05.png").getImage() };
  	/**
 	 * 
-	 * 骰子点数图像
+	 * ??????????
 	 * 
 	 */
 	private Image[] dicePoints = new Image[] {
@@ -51,7 +51,7 @@ public class DiceModel extends Tick implements Port {
 			new ImageIcon("images/dice/point/6.png").getImage() };
 
 	/**
-	 * 骰子按钮图片
+	 * ????????
 	 */
 	public  ImageIcon[] diceIMG = new ImageIcon[] {
 			new ImageIcon("images/string/dice.png"),
@@ -61,33 +61,33 @@ public class DiceModel extends Tick implements Port {
 	};
 	/**
 	 * 
-	 * 游戏运行
+	 * ???????
 	 * 
 	 */
 	private GameRunning running = null;
 
 	/**
 	 * 
-	 * 图片滚动次数记载（用于图片的滚动显示）
+	 * ???????????????????????????????
 	 * 
 	 */
 	private int imgCount;
 	/**
 	 * 
-	 * 骰子正在滚动状态
+	 * ?????????????
 	 * 
 	 */
 	public static int DICE_RUNNING = 1;
 	/**
-	 * 骰子产生点数状态
+	 * ?????????????
 	 */
 	public static int DICE_POINT = 2;
 	/**
-	 * 骰子当前状态
+	 * ????????
 	 */
 	private int diceState;
 	/**
-	 * 按钮显示控制
+	 * ??????????
 	 */
 	boolean showButton;
 
@@ -125,7 +125,7 @@ public class DiceModel extends Tick implements Port {
 	
 	/**
 	 * 
-	 * 获取当前显示图片
+	 * ???????????
 	 * 
 	 */
 	public Image getNowImg(){
@@ -155,17 +155,17 @@ public class DiceModel extends Tick implements Port {
 	@Override
 	public void updata(long tick) {
 		this.nowTick = tick;
-		// 确认按钮状态
+		// ???????
 		this.checkButton();
 	}
 
 	/**
 	 * 
-	 * 确认按钮状态
+	 * ???????
 	 * 
 	 */
 	private void checkButton() {
-		if (this.running.getNowPlayerState() == GameRunning.STATE_THROWDICE) {// "掷点状态"
+		if (this.running.getNowPlayerState() == GameRunning.STATE_THROWDICE) {// "??????"
 			this.showButton = true;
 		} else {
 			this.showButton = false;
@@ -193,11 +193,11 @@ public class DiceModel extends Tick implements Port {
 	@Override
 	public void startGameInit() {
 		
-		// 初始化骰子状态为“产生点数状态”
+		// ??????????????????????????
 		this.diceState = DiceModel.DICE_POINT;
-		// 初始化按钮可以点击
+		// ??????????????
 		this.showButton = true;
-		// 骰子运动持续时间设定
+		// ????????????????
 		this.lastTime = Control.rate * 1;
 	}
 

@@ -40,31 +40,31 @@ public class JPanelGame extends JPanel{
 	private Control control = null;
 
 	/**
-	 * 全局左上角X
+	 * ????????X
 	 */
 	public int posX = 100;
 	/**
-	 * 全局左上角Y
+	 * ????????Y
 	 * */
 	public int posY = 100;
 
 	public JPanelGame() {
 		setLayout(new BorderLayout());
-		// 初始化游戏
+		// ????????
 		initGame();
 	}
 
 	/**
 	 * 
-	 * 初始化游戏
+	 * ????????
 	 * 
 	 */
 	private void initGame() {
-		// 添加控制器
+		// ????????
 		control = new Control();
-		// 初始化UI
+		// ?????UI
 		initUI();
-		// panel 传入控制器
+		// panel ?????????
 		control.setPanel(this);
 	}
 
@@ -74,45 +74,45 @@ public class JPanelGame extends JPanel{
 
 	/**
 	 * 
-	 * 初始化UI
+	 * ?????UI
 	 * 
 	 */
 	private void initUI() {
-		// 创建背景UI
+		// ????????UI
 		this.backgroundUI = new Background(0, 0, 950, 650,
 				control.getBackground(),this);
-		// 创建土地UI
+		// ????????UI
 		this.landsUI = new Lands(posX, posY, 950, 650, control.getLand());
-		// 创建房屋UI
+		// ????????UI
 		this.buildingsUI = new Buildings(posX, posY, 950, 650,
 				control.getBuilding());
-		// 创建玩家显示UI
+		// ??????????UI
 		this.playersUI = new Players(posX, posY, 950, 650,control.getRunning(), control.getPlayers());
-		// 玩家信息面板UI
+		// ?????????UI
 		this.layerPlayersPanel = new PlayersPanel(posX + 64, posY + 66, 170,
 				250, control.getPlayers());
-		// 文字显示面板UI
+		// ??????????UI
 		this.textTip = new TextTip(0,0,950,650,control.getTextTip());
-		// 骰子事件UI
+		// ?????录?UI
 		this.dice = new Dice(posX + 64, posY + 320, 170, 90, control);
-		// 事件显示UI
+		// ?录????UI
 		this.event = new Event(0, 0, 950, 650, control.getEvents());
-		// 商店界面UI
+		// ??????UI
 		this.shop = new Shop(0, 0, 750, 650, control, this);
-		// 游戏运转界面UI
+		// ??????????UI
 		this.running = new Running(780, 0, 200, 80, control.getRunning(),this);
-		// 场景效果UI
+		// ???????UI
 		this.effect = new Effect(0, 0, 950, 650, control.getEffect(),this);
-		// 玩家信息面板显示
+		// ????????????
 		this.playerInfo = new PlayerInfo(control.getPlayers(),this);
-		// 对话UI
-		this.massageYesNo = new MassageYesNo("选择框", "创建一个对话框", this);
-		// 对话UI
-		this.massageOk = new MassageOk("确定框", "创建一个对话框", this);
-		// 对话UI
-		this.massageSimple = new MassageSimple("多选框", "创建一个对话框", this);
+		// ???UI
+		this.massageYesNo = new MassageYesNo("????", "????????????", this);
+		// ???UI
+		this.massageOk = new MassageOk("?????", "????????????", this);
+		// ???UI
+		this.massageSimple = new MassageSimple("?????", "????????????", this);
 
-		// lays存放所有panel组件
+		// lays???????panel???
 		lays = new ArrayList<Layer>();
 		lays.add(backgroundUI);
 		lays.add(dice);
@@ -203,12 +203,12 @@ public class JPanelGame extends JPanel{
 
 	/**
 	 * 
-	 * 初始化游戏配置
+	 * ????????????
 	 * 
 	 */
 	public void startGamePanelInit() {
 		for (Layer temp : this.lays) {
-			// 刷新窗口UI
+			// ??麓???UI
 			temp.startPanel();
 		}
 	}

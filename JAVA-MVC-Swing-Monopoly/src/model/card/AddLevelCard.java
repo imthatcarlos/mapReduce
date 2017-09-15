@@ -9,7 +9,7 @@ import model.buildings.Building;
 
 /**
  * 
- * 加盖卡,当前房屋加盖一层
+ * ????,????????????
  * OK
  * 
  */
@@ -18,7 +18,7 @@ public class AddLevelCard extends Card {
 	public AddLevelCard(PlayerModel owner) {
 		super(owner);
 		this.name = "AddLevelCard";
-		this.cName = "加盖卡";
+		this.cName = "????";
 		this.price = 30;
 
 	}

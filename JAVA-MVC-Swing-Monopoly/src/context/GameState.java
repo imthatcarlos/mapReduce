@@ -2,7 +2,7 @@ package context;
 
 /**
  * 
- * 游戏常量
+ * ???????
  * 
  * 
  * @author MOVELIGHTS
@@ -10,7 +10,7 @@ package context;
  */
 public class GameState {
 
-	// 停留在建筑返回状态
+	// ??????????????
 	
 	public  final static int HOSPITAL_EVENT = 1;
 
@@ -30,11 +30,11 @@ public class GameState {
 	
 	public  final static int SHOP_EVENT = 9;
 	
-	// 路过建筑返回状态
+	// 路????????????
 	
 	public final static int ORIGIN_PASS_EVENT = 1;
 	
-	// 使用卡片返回状态
+	// ??每????????
 	
 	public  final static int CARD_ADDLEVEL = 1;
 	
@@ -60,7 +60,7 @@ public class GameState {
 	
 	public  final static int CARD_STOP = 12;
 	
-	// 卡片作用效果返回状态
+	// ????????????????
 	
 	public final static int CARD_BUFF_STOP = 1;
 	

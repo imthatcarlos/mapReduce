@@ -11,7 +11,7 @@ import model.buildings.Building;
 
 
 /**
- * 房屋刷新层
+ * ??????虏?
  * 
  * @author MOVELIGHTS
  * 
@@ -20,28 +20,28 @@ public class Buildings extends Layer {
 
 	/**
 	 * 
-	 * 加载房屋信息
+	 * ??????????
 	 * 
 	 */
 	private model.BuildingsModel informationBuilding;
 	/**
 	 * 
-	 * 房屋链表
+	 * ????????
 	 * 
 	 */
 	private List<Building> building;
 	/**
-	 * house 图片 1-5级别
+	 * house ?? 1-5????
 	 * 
 	 */
 	private  Image HOUSE_01 = new ImageIcon("images/building/house01.png").getImage();
 	/**
-	 * house 图片 1-5级别
+	 * house ?? 1-5????
 	 * 
 	 */
 	private  Image HOUSE_02 = new ImageIcon("images/building/house02.png").getImage();
 	/**
-	 * 伪透明图片
+	 * ??????
 	 * 
 	 */
 	public  Image TRANSPARENT = new ImageIcon("images/window/transparent.png").getImage();
@@ -53,18 +53,18 @@ public class Buildings extends Layer {
 	}
 
 	public void paint(Graphics g) {
-		// 绘制建筑物
+		// ?????????
 		paintBuildings(g);
 	}
 	
 	/**
 	 * 
-	 * 绘制建筑物
+	 * ?????????
 	 * 
 	 */
 	private void paintBuildings(Graphics g) {
 		for(Building temp : this.building){
-			// 房屋绘制
+			// ???????
 			paintBuilding(temp,g);
 		}
 	}
@@ -83,10 +83,10 @@ public class Buildings extends Layer {
 								* 60, y + (i + 1) * 60, 60 * (level - 1), 0,
 						60 * level, temp.getHeight(null), null);
 			}
-			// 透明覆盖白条
+			// ??????????
 			g.drawImage(this.TRANSPARENT, x + j * 60, y + i * 60, x + (j + 1)
 					* 60, y + (i + 1) * 60, 0, 0, 60, 60, null);
-			// 土地拥有者名字显示
+			// ????????????????
 			g.drawString("" + building.getOwner().getName(), x + j * 60 + 4, y + i
 					* 60 + 14);
 		}

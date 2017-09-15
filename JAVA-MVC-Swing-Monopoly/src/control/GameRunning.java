@@ -10,7 +10,7 @@ import ui.JPanelGame;
 
 /**
  * 
- * 游戏运转处理
+ * ??????????
  * 
  * @author MOVELIGHTS
  * 
@@ -18,78 +18,78 @@ import ui.JPanelGame;
 public class GameRunning {
 
 	/**
-	 * 玩家列表
+	 * ??????
 	 */
 	private List<PlayerModel> players = null;
 
 	/**
-	 * 当前操作玩家
+	 * ??????????
 	 */
 	private PlayerModel nowPlayer = null;
 
 	/**
-	 * 骰子当前点数
+	 * ??????????
 	 */
 	private int point;
 
 	/**
-	 * 玩家使用卡片状态
+	 * ?????每????
 	 */
 	public static int STATE_CARD = 1;
 	/**
-	 * 玩家卡片作用状态
+	 * ???????????
 	 */
 	public static int STATE_CARD_EFFECT = 2;
 	/**
-	 * 玩家掷点状态
+	 * ?????????
 	 */
 	public static int STATE_THROWDICE = 3;
 	/**
-	 * 玩家移动状态
+	 * ????????
 	 */
 	public static int STATE_MOVE = 4;
 	/**
 	 * 
-	 * 游戏终止状态
+	 * ????????
 	 * 
 	 */
 	public static int GAME_STOP = 5;
 	/**
 	 * 
-	 * 玩家目前状态
+	 * ???????
 	 * 
 	 */
 	private int nowPlayerState;
 
 	/**
 	 * 
-	 * 游戏进行天数
+	 * ???????????
 	 * 
 	 */
 	public static int day = 1;
 
 	/**
 	 * 
-	 * 当前地图代码
+	 * ??????????
 	 * 
 	 */
 	public static int MAP = 1;
 	/**
 	 * 
-	 * 游戏上限天数 - 1为无上限
+	 * ??????????? - 1???????
 	 * 
 	 */
 	public static int GAME_DAY = -1;
 	/**
 	 * 
-	 * 游戏金钱上线（即胜利条件）-1为无上限
+	 * ??????????????????????-1???????
 	 * 
 	 */
 	public static int MONEY_MAX = -1;
 
 	/**
 	 * 
-	 * 初始化玩家初始金钱
+	 * ?????????????
 	 * 
 	 */
 	public static int PLAYER_CASH = 1000;
@@ -103,7 +103,7 @@ public class GameRunning {
 
 	/**
 	 * 
-	 * 获得当前玩家状态
+	 * ??玫???????
 	 * 
 	 */
 	public int getNowPlayerState() {
@@ -112,30 +112,30 @@ public class GameRunning {
 
 	/**
 	 * 
-	 * 转换玩家状态
+	 * ????????
 	 * 
 	 */
 	public void nextState() {
-		// 判断游戏是否得出结果
+		// ?????????贸????
 		if (gameContinue()) {
 			if (this.nowPlayerState == STATE_CARD) {
-				// “掷点状态”
+				// ??????????
 				this.nowPlayerState = STATE_CARD_EFFECT;
-				// 卡片BUFF
+				// ???BUFF
 				this.control.cardsBuff();
 			} else if (this.nowPlayerState == STATE_CARD_EFFECT) {
-				// “卡片生效状态”
+				// ????????????
 				this.nowPlayerState = STATE_THROWDICE;
 			} else if (this.nowPlayerState == STATE_THROWDICE) {
-				// 移动状态
+				// ?????
 				this.nowPlayerState = STATE_MOVE;
 			} else if (this.nowPlayerState == STATE_MOVE) {
-				// 换人操作
+				// ???????
 				this.nowPlayerState = STATE_CARD;
 				this.nextPlayer();
-				// 产生一个点数
+				// ???????????
 				this.setPoint((int) (Math.random() * 6));
-				// 完毕后执行下一个玩家的动作 - STATE_CARD
+				// ??????????????????? - STATE_CARD
 				this.control.useCards();
 			}
 		}
@@ -143,7 +143,7 @@ public class GameRunning {
 
 	/**
 	 * 
-	 * 获取当前玩家
+	 * ?????????
 	 * 
 	 */
 	public PlayerModel getNowPlayer() {
@@ -156,7 +156,7 @@ public class GameRunning {
 
 	/**
 	 * 
-	 * 获取非当前玩家
+	 * ??????????
 	 * 
 	 */
 	public PlayerModel getNotNowPlayer() {
@@ -165,41 +165,41 @@ public class GameRunning {
 	}
 
 	/**
-	 * 换人操作
+	 * ???????
 	 */
 	private void nextPlayer() {
-		// 减少时间
+		// ???????
 		if (this.nowPlayer.getInPrison() > 0) {
 			this.nowPlayer.setInPrison(this.nowPlayer.getInPrison() - 1);
 		}
 		if (this.nowPlayer.getInHospital() > 0) {
 			this.nowPlayer.setInHospital(this.nowPlayer.getInHospital() - 1);
 		}
-		// 换人
+		// ????
 		if (this.nowPlayer.equals(this.players.get(0))) {
 			this.nowPlayer = this.players.get(1);
 		} else {
 			this.nowPlayer = this.players.get(0);
-			// 结束后游戏天数增加
+			// ?????????????????
 			day++;
 		}
 	}
 
 	/**
 	 * 
-	 * 判断游戏是否结束
+	 * ????????????
 	 * 
 	 * 
 	 */
 	public boolean gameContinue() {
 		PlayerModel p1 = this.nowPlayer;
 		PlayerModel p2 = this.nowPlayer.getOtherPlayer();
-		// 天数
+		// ????
 		if (GAME_DAY > 0 && day >= GAME_DAY) {
 			this.control.gameOver();
 			return false;
 		}
-		// 最大金钱
+		// ?????
 		if (MONEY_MAX > 0 && p1.getCash() >= MONEY_MAX) {
 			this.control.gameOver();
 			return false;
@@ -207,7 +207,7 @@ public class GameRunning {
 			this.control.gameOver();
 			return false;
 		}
-		// 破产
+		// ???
 		if (p1.getCash() < 0) {
 			this.control.gameOver();
 			return false;
@@ -236,17 +236,17 @@ public class GameRunning {
 
 	/**
 	 * 
-	 * 开始游戏设置
+	 * ??????????
 	 * 
 	 */
 	public void startGameInit() {
-		// 设定当前游戏玩家
+		// ???????????
 		this.nowPlayer = this.players.get(0);
-		// 设定当前玩家状态为“使用卡片”
+		// ???????????????每????
 		this.nowPlayerState = STATE_CARD;
-		// 随机设定点数
+		// ?????????
 		this.setPoint((int) (Math.random() * 6));
-		// 首个玩家使用卡片
+		// ????????每??
 		this.control.useCards();
 	}
 

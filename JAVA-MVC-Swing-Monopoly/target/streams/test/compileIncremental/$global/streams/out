@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 3 sources: invalidated sources (3) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 3 Java sources to /Users/carlos/Desktop/cs441/carlos_beltran_hw1/JAVA-MVC-Swing-Monopoly/target/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@2bbd31fd directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.028850185 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.013180982 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.042710348 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m

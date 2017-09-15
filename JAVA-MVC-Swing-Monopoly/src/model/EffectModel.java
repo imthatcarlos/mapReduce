@@ -9,7 +9,7 @@ import control.Control;
 
 /**
  * 
- * 事件信息
+ * ?录????
  * 
  * @author MOVELIGHTS
  * 
@@ -19,12 +19,12 @@ public class EffectModel extends Tick implements Port {
 	Point loction = new Point(0,0);
 	
 	/**
-	 * 显示图片源
+	 * ??????
 	 */
 	private Image[] img = null;
 	/**
 	 * 
-	 * 火眼效果开始
+	 * ??????????
 	 * 
 	 */
 	private Image[] imgStart1 = {
@@ -47,7 +47,7 @@ public class EffectModel extends Tick implements Port {
 	
 	/**
 	 * 
-	 * WIN效果
+	 * WIN???
 	 * 
 	 */
 	private Image[] win = {
@@ -68,7 +68,7 @@ public class EffectModel extends Tick implements Port {
 	};
 	/**
 	 * 
-	 * 圆滑效果开始
+	 * ?????????
 	 * 
 	 */
 	private Image[] imgStart2 = {
@@ -86,7 +86,7 @@ public class EffectModel extends Tick implements Port {
 	};
 	/**
 	 * 
-	 * 游戏结束效果开始
+	 * ?????????????
 	 * 
 	 */
 	private Image[] timeover = {
@@ -112,7 +112,7 @@ public class EffectModel extends Tick implements Port {
 	
 	/**
 	 * 
-	 * 游戏结束效果开始
+	 * ?????????????
 	 * 
 	 */
 	private Image[] timeover2 = {
@@ -133,7 +133,7 @@ public class EffectModel extends Tick implements Port {
 	};
 	/**
 	 * 
-	 * 游戏结束效果开始
+	 * ?????????????
 	 * 
 	 */
 	private Image[] win_ = {
@@ -154,7 +154,7 @@ public class EffectModel extends Tick implements Port {
 	};
 	/**
 	 * 
-	 * 游戏结束效果开始
+	 * ?????????????
 	 * 
 	 */
 	private Image[] lose_ = {
@@ -174,13 +174,13 @@ public class EffectModel extends Tick implements Port {
 	};
 	
 	/**
-	 * 每张图片显示间隔 （/帧数）
+	 * 每?????????? ??/?????
 	 */
 	private int imageShowGap = 3;
 	
 	/**
 	 * 
-	 * 显示图片
+	 * ?????
 	 * 
 	 */
 	public void showImg(String effectName) {

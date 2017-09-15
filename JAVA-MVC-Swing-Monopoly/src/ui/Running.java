@@ -49,9 +49,9 @@ public class Running extends Layer{
 
 	@Override
 	public void paint(Graphics g) {
-		// 显示游戏天数
+		// ??????????
 		g.drawImage(bg, 0, 0, bg.getWidth(null), bg.getHeight(null), 0, 0, bg.getWidth(null), bg.getHeight(null), null);
-		// 显示数字
+		// ???????
 		int day = running.getDay();
 		int posX = 100;
 		int posY = 16;
@@ -77,7 +77,7 @@ public class Running extends Layer{
 	}
 	/**
 	 * 
-	 * 将窗体隐藏
+	 * ??????????
 	 * 
 	 */
 	public void moveToBack() {
@@ -86,7 +86,7 @@ public class Running extends Layer{
 
 	/**
 	 * 
-	 * 将窗体显现
+	 * ??????????
 	 * 
 	 */
 	public void moveToFront() {

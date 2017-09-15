@@ -27,7 +27,7 @@ public class MassageButton extends JPanel implements MouseListener {
 	private Massage massage = null;
 
 	public MassageButton(String name,Massage massage,int x,int y) {
-		this.name = name;// ÉèÖÃÃû³Æ
+		this.name = name;// ????????
 		this.massage = massage;
 		this.img = this.getImg(name);
 		this.normalImage = this.img[0];
@@ -60,7 +60,7 @@ public class MassageButton extends JPanel implements MouseListener {
 	}
 
 	public void paint(Graphics g) {
-		this.setOpaque(false); // ±³¾°Í¸Ã÷
+		this.setOpaque(false); // ???????
 		if (enabled) {
 			g.drawImage(currentImage, this.getX(), this.getY(),
 					this.getWidth(), this.getHeight(), this);

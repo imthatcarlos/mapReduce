@@ -6,7 +6,7 @@ import control.Control;
 
 /**
  * 
- * 起点 玩家通过时奖励金钱
+ * ??? ??????????????
  * 
  * 
  * @author MOVELIGHTS
@@ -14,11 +14,11 @@ import control.Control;
  */
 public class Origin extends Building {
 	/**
-	 * 通过时奖励的金钱
+	 * ????????????
 	 */
 	private int passReward;
 	/**
-	 * 停留时奖励金钱
+	 * ???????????
 	 */
 	private int reward;
 
@@ -26,7 +26,7 @@ public class Origin extends Building {
 
 	public Origin(int posX, int posY) {
 		super(posX, posY);
-		this.name = "起点";
+		this.name = "???";
 		this.reward = 500;
 		this.passReward = 200;
 	}

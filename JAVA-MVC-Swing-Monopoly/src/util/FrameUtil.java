@@ -9,13 +9,13 @@ public class FrameUtil {
 	
 	/**
 	 * 
-	 * frame面板居中
+	 * frame??????
 	 * 
 	 * @param jf
 	 */
 	public static void setFrameCenter (JFrame jf) {
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
-		Dimension screen = toolkit.getScreenSize();// 接数据对象
+		Dimension screen = toolkit.getScreenSize();// ?????????
 		int x = (screen.width - jf.getWidth()) / 2;
 		int y = (screen.height - jf.getHeight()) / 2 - 32;
 		jf.setLocation(x, y);

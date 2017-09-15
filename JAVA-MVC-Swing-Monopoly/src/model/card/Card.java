@@ -9,27 +9,27 @@ public abstract class Card {
 
 	/**
 	 * 
-	 * 卡片英文名字
+	 * ??????????
 	 * 
 	 */
 	protected String name;
 	/**
 	 * 
-	 * 卡片中文名字
+	 * ???????????
 	 * 
 	 */
 	protected String cName;
 	
 	/**
 	 * 
-	 * 卡片图片
+	 * ?????
 	 * 
 	 */
 	protected Image img;
 	
 	/**
 	 * 
-	 * 拥有者
+	 * ?????
 	 * 
 	 * 
 	 */
@@ -37,14 +37,14 @@ public abstract class Card {
 	
 	/**
 	 * 
-	 * 作用对象
+	 * ???枚???
 	 * 
 	 */
 	protected PlayerModel eOwner;
 	
 	/**
 	 * 
-	 * 卡片价格
+	 * ??????
 	 * 
 	 */
 	protected int price = 100;
@@ -55,14 +55,14 @@ public abstract class Card {
 	
 	/**
 	 * 
-	 * 使用卡片效果
+	 * ??每?????
 	 * 
 	 * 
 	 */
 	public abstract int useCard ();
 	/**
 	 * 
-	 *  卡片持续效果
+	 *  ??????????
 	 * 
 	 */
 	public int cardBuff(){ return 0;}

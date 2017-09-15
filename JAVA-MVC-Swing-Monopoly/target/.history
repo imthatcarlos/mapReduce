@@ -1,0 +1,9 @@
+compile
+test:compile
+test
+clean
+exit
+clean
+compile
+test
+run

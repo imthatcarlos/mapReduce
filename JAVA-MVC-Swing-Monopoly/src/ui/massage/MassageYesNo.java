@@ -34,9 +34,9 @@ public class MassageYesNo extends Massage {
 	
 	public MassageYesNo(String titile,String information,JPanelGame panel) {
 		super(titile, panel);
-		// 增加按钮
+		// ??????
 		addButtons();
-		// 增加文本域
+		// ?????????
 		addTextArea();
 		this.textArea.setText(information);
 	}
@@ -56,7 +56,7 @@ public class MassageYesNo extends Massage {
 
 	private void addTextArea() {
 		textArea = new JTextArea();
-		textArea.setText("我了个去。。");
+		textArea.setText("??????????");
 		textArea.setBounds(18, 39, 230, 50);
 		textArea.setSelectedTextColor(Color.BLUE);
 		textArea.setOpaque(false);

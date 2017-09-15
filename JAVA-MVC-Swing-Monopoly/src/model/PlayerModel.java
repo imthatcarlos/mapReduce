@@ -13,7 +13,7 @@ import control.Control;
 import control.GameRunning;
 
 /**
- * 玩家信息
+ * ??????
  * 
  * @author MOVELIGHTS
  * 
@@ -21,75 +21,75 @@ import control.GameRunning;
 public class PlayerModel extends Tick implements Port {
 
 	/**
-	 * 姓名
+	 * ????
 	 */
 	private String name;
 	/**
-	 * 玩家使用人物
+	 * ??????????
 	 */
 	private int part = 0;
 	/**
-	 * 现金
+	 * ???
 	 */
 	private int cash;
 	/**
-	 * 点卷
+	 * ???
 	 */
 	private int nx;
 
 	/**
-	 * 当前坐标 x 人物右下角点X
+	 * ??????? x ???????陆??X
 	 */
 	private int x;
 	/**
-	 * 当前坐标 y 人物右下角点y
+	 * ??????? y ???????陆??y
 	 */
 	private int y;
 
 	/**
 	 * 
-	 * 剩余住院天数
+	 * ?????????
 	 * 
 	 */
 	private int inHospital;
 	/**
 	 * 
-	 * 剩余监狱天数
+	 * ??????????
 	 * 
 	 */
 	private int inPrison;
 
 	/**
 	 * 
-	 * 玩家编号,显示房屋图片使用
+	 * ?????,????????????
 	 * 
 	 */
 	private int number = 0;
 
 	/**
 	 * 
-	 * 玩家拥有房屋链表
+	 * ?????????????
 	 * 
 	 */
 	private List<Building> buildings = new ArrayList<Building>();
 
 	/**
 	 * 
-	 * 拥有卡片
+	 * ?????
 	 * 
 	 */
 	private List<Card> cards = new ArrayList<Card>();
 
 	/**
 	 * 
-	 * 最大可持有卡片
+	 * ?????????
 	 * 
 	 */
 	public static int MAX_CAN_HOLD_CARDS = 8;
 
 	/**
 	 * 
-	 * 附加身上的EFFECT 卡片
+	 * ?????????EFFECT ???
 	 * 
 	 */
 	private List<Card> effectCards = new ArrayList<Card>();
@@ -98,13 +98,13 @@ public class PlayerModel extends Tick implements Port {
 
 	/**
 	 * 
-	 * 对方玩家
+	 * ??????
 	 * 
 	 */
 	private PlayerModel otherPlayer = null;
 	/**
 	 * 
-	 * 游戏控制器
+	 * ?????????
 	 * 
 	 */
 	private Control control = null;
@@ -141,7 +141,7 @@ public class PlayerModel extends Tick implements Port {
 
 	/**
 	 * 
-	 * 初始化玩家图像
+	 * ???????????
 	 * 
 	 */
 	private void initPlayerIMG() {
@@ -170,10 +170,10 @@ public class PlayerModel extends Tick implements Port {
 
 	/**
 	 * 
-	 * 获取玩家图像
+	 * ?????????
 	 * 
-	 * @return <li>logo LOGO</li> <li>mini 小图标-无边</li> <li>mini_on 小图标-有边</li>
-	 *         <i>h5 图像 </li> <li>other null</li>
+	 * @return <li>logo LOGO</li> <li>mini ????-???</li> <li>mini_on ????-???</li>
+	 *         <i>h5 ??? </li> <li>other null</li>
 	 */
 	public Image getIMG(String str) {
 		if (str.equals("logo"))
@@ -263,34 +263,34 @@ public class PlayerModel extends Tick implements Port {
 	}
 
 	public void debug() {
-		System.out.println("玩家:" + name + ",坐标：[" + x + "," + y + "].");
+		System.out.println("???:" + name + ",????[" + x + "," + y + "].");
 	}
 
 	/**
 	 * 
-	 * 开始游戏设置
+	 * ??????????
 	 * 
 	 */
 	public void startGameInit() {
-		// 初始化玩家图像
+		// ???????????
 		this.initPlayerIMG();
-		// 设置单位方格（60px）的运动时间
+		// ???玫??????60px??????????
 		this.lastTime = Control.rate / 3;
-		// 初始化玩家金钱
+		// ??????????
 		this.cash = GameRunning.PLAYER_CASH;
 	}
 
 	@Override
 	public void updata(long tick) {
 		this.nowTick = tick;
-		// 移动玩家
+		// ??????
 		if (this.startTick < this.nowTick && this.nextTick >= this.nowTick) {
 			this.control.movePlayer();
-			// 路过建筑
+			// 路??????
 			if (this.nextTick != this.nowTick) {
 				this.control.prassBuilding();
 			}
-			// 玩家移动完毕，停下操作
+			// ????????????虏???
 			if (this.nextTick == this.nowTick) {
 				this.control.playerStopJudge();
 			}

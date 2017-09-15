@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(tests.RobCardTest, com.novocode.junit.JUnitFingerprint@2241b89f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(tests.TortoiseCardTest, com.novocode.junit.JUnitFingerprint@2241b89f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(tests.BuildingTest, com.novocode.junit.JUnitFingerprint@2241b89f, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 4, Failed 0, Errors 0, Passed 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	tests.RobCardTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	tests.TortoiseCardTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	tests.BuildingTest[0m

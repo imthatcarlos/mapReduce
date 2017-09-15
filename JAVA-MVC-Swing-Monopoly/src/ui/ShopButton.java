@@ -33,7 +33,7 @@ public class ShopButton extends JPanel implements MouseListener {
 	
 	public ShopButton(Shop shopUI,String name, int x, int y,Control control) {
 		this.shopUI = shopUI;
-		this.name = name;//设置名称
+		this.name = name;//????????
 		this.control = control;
 		this.img = this.shopUI.createCardImg(name);
 		this.normalImage = this.img[0];
@@ -55,7 +55,7 @@ public class ShopButton extends JPanel implements MouseListener {
 	}
 
 	public void paint(Graphics g) {
-		this.setOpaque(false); // 背景透明
+		this.setOpaque(false); // ???????
 		if (enabled){
 			g.drawImage(currentImage, this.getX(), this.getY(), this.getWidth(),
 					this.getHeight(), this);
@@ -74,12 +74,12 @@ public class ShopButton extends JPanel implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 			currentImage = pressedImage;
 			if(enabled){
-				if (this.name.equals("close")){//退出商店
+				if (this.name.equals("close")){//??????
 					this.shopUI.moveToBack();
 					this.control.exitShop();
-				} else if (this.name.equals("cancel")){//取消当前选择
+				} else if (this.name.equals("cancel")){//?????????
 					this.shopUI.setChooseCard(null);
-				} else if (this.name.equals("buy")){//购买当前选择
+				} else if (this.name.equals("buy")){//????????
 					this.control.buyCard(this.shopUI.getShop());
 				} else {
 					this.shopUI.setChooseCard(this);

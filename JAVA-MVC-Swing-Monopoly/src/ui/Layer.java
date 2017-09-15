@@ -10,26 +10,26 @@ import javax.swing.JPanel;
 import util.FileUtil;
 
 /**
- * 绘制层 抽象类
+ * ????? ??????
  * 
  * @author MOVELIGHTS
  * 
  */
 public abstract class Layer extends JPanel{
 	/**
-	 * 窗口左上角x坐标
+	 * ?????????x????
 	 */
 	protected int x;
 	/**
-	 * 窗口左上角y坐标
+	 * ?????????y????
 	 */
 	protected int y;
 	/**
-	 * 窗口宽度
+	 * ??????
 	 */
 	protected int w;
 	/**
-	 * 窗口高度
+	 * ??????
 	 */
 	protected int h;
 
@@ -70,33 +70,33 @@ public abstract class Layer extends JPanel{
 
 	/**
 	 * 
-	 *  边框绘制
+	 *  ??????
 	 * 
 	 */
 	public void createWindow(Graphics g) {
 		g.drawImage(WINDOW_IMG, 0, 0, 0 + SIZE, 0 + SIZE, 0, 0, SIZE, SIZE,
-				null);// 左上固定
+				null);// ??????
 		g.drawImage(WINDOW_IMG, 0 + SIZE, 0, 0 + w - SIZE, 0 + SIZE, SIZE, 0,
-				WINDOW_W - SIZE, SIZE, null);// 中间
+				WINDOW_W - SIZE, SIZE, null);// ???
 		g.drawImage(WINDOW_IMG, 0 + w - SIZE, 0, 0 + w, 0 + SIZE, WINDOW_W
-				- SIZE, 0, WINDOW_W, SIZE, null);// 右上固定
+				- SIZE, 0, WINDOW_W, SIZE, null);// ??????
 		g.drawImage(WINDOW_IMG, 0, 0 + SIZE, 0 + SIZE, 0 + h - SIZE, 0, SIZE,
-				SIZE, WINDOW_H - SIZE, null);// 中右
+				SIZE, WINDOW_H - SIZE, null);// ????
 		g.drawImage(WINDOW_IMG, 0 + SIZE, 0 + SIZE, 0 + w - SIZE, 0 + h - SIZE,
-				SIZE, SIZE, WINDOW_W - SIZE, WINDOW_H - SIZE, null);// 中中
+				SIZE, SIZE, WINDOW_W - SIZE, WINDOW_H - SIZE, null);// ????
 		g.drawImage(WINDOW_IMG, 0 + w - SIZE, 0 + SIZE, 0 + w, 0 + h - SIZE,
-				WINDOW_W - SIZE, SIZE, WINDOW_W, WINDOW_H - SIZE, null);// 中右
+				WINDOW_W - SIZE, SIZE, WINDOW_W, WINDOW_H - SIZE, null);// ????
 		g.drawImage(WINDOW_IMG, 0, 0 + h - SIZE, 0 + SIZE, 0 + h, 0, WINDOW_H
-				- SIZE, SIZE, WINDOW_H, null);// 下左
+				- SIZE, SIZE, WINDOW_H, null);// ????
 		g.drawImage(WINDOW_IMG, 0 + SIZE, 0 + h - SIZE, 0 + w - SIZE, 0 + h,
-				SIZE, 50 - SIZE, WINDOW_W - SIZE, WINDOW_H, null);// 下中
+				SIZE, 50 - SIZE, WINDOW_W - SIZE, WINDOW_H, null);// ????
 		g.drawImage(WINDOW_IMG, 0 + w - SIZE, 0 + h - SIZE, 0 + w, 0 + h,
-				WINDOW_W - SIZE, WINDOW_H - SIZE, WINDOW_W, WINDOW_H, null);// 下右
+				WINDOW_W - SIZE, WINDOW_H - SIZE, WINDOW_W, WINDOW_H, null);// ????
 	}
 	
 	abstract public void paint(Graphics g);
 	/**
-	 * 开始游戏panel设置
+	 * ??????panel????
 	 */
 	abstract public void startPanel();
 }

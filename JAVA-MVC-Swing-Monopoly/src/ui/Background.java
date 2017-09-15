@@ -10,7 +10,7 @@ import model.BackgroundModel;
 
 /**
  * 
- * 背景更新层
+ * ???????虏?
  * 
  * @author MOVELIGHTS
  * 
@@ -18,12 +18,12 @@ import model.BackgroundModel;
 public class Background extends Layer {
 
 	/**
-	 * 背景图片
+	 * ??????
 	 */
 	private Image bg = null;
 	/**
 	 * 
-	 * 背景模型
+	 * ???????
 	 * 
 	 */
 	private BackgroundModel background = null;
@@ -37,12 +37,12 @@ public class Background extends Layer {
 	}
 
 	public void paint(Graphics g) {
-		// 绘制背景
+		// ???????
 		this.paintBg(g);
 	}
 	/**
 	 * 
-	 * 将窗体隐藏
+	 * ??????????
 	 * 
 	 */
 	public void moveToBack() {
@@ -51,7 +51,7 @@ public class Background extends Layer {
 
 	/**
 	 * 
-	 * 将窗体显现
+	 * ??????????
 	 * 
 	 */
 	public void moveToFront() {
@@ -60,7 +60,7 @@ public class Background extends Layer {
 	
 	/**
 	 * 
-	 * 背景绘制方法
+	 * ???????????
 	 * 
 	 */
 	public void paintBg(Graphics g){

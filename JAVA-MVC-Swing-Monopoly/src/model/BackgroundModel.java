@@ -12,14 +12,14 @@ import util.FileUtil;
 
 /**
  * 
- * 背景更新
+ * ????????
  * 
  * @author MOVELIGHTS
  *
  */
 public class BackgroundModel extends Tick implements Port{
 	/**
-	 * 背景图像
+	 * ???????
 	 */
 	private Image bg = null;
 	public BackgroundModel (){
@@ -35,7 +35,7 @@ public class BackgroundModel extends Tick implements Port{
 
 	/**
 	 * 
-	 * 开始游戏设置
+	 * ??????????
 	 * 
 	 */
 	public void startGameInit (){

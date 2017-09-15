@@ -13,7 +13,7 @@ import model.PlayerModel;
 
 /**
  * 
- * 玩家位置数据更新层
+ * ????????????虏?
  * 
  * @author MOVELIGHTS
  * 
@@ -34,7 +34,7 @@ public class Players extends Layer {
 	}
 
 	public void paint(Graphics g) {
-		// 绘制玩家在地图中情况
+		// ????????????????
 		for (PlayerModel temp : players) {
 			paintPlayer(temp, g);
 		}
@@ -42,11 +42,11 @@ public class Players extends Layer {
 
 	/**
 	 * 
-	 * 绘制单个玩家
+	 * ??????????
 	 * 
 	 */
 	private void paintPlayer(PlayerModel player, Graphics g) {
-		// 判断是否为当前玩家
+		// ?????????????
 		boolean show = true;
 		Image temp = player.getIMG("mini");
 		if (player.equals(this.run.getNowPlayer())) {
@@ -54,7 +54,7 @@ public class Players extends Layer {
 		} else {
 			if (this.x == player.getOtherPlayer().getX()
 					&& this.y == player.getOtherPlayer().getY()) {
-				// 重合不显示
+				// ???????
 				show = false;
 			}
 		}

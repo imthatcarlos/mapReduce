@@ -2,27 +2,27 @@ package model;
 
 /**
  * 
- * 游戏对象父类
+ * ?????????
  * 
  * @author MOVELIGHTS
  *
  */
 public class Tick {
 	/**
-	 * 记载当前的tick值
+	 * ????????tick?
 	 */
 	protected long nowTick;
 	
 	/**
-	 * 开始事件的tick值
+	 * ????录???tick?
 	 */
 	protected long startTick;
 	/**
-	 * 事件持续时间 s * 30;
+	 * ?录???????? s * 30;
 	 */
 	protected long lastTime;
 	/**
-	 * 下一个tick值
+	 * ?????tick?
 	 */
 	protected long nextTick;
 	

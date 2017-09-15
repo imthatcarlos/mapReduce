@@ -15,19 +15,19 @@ import model.PlayerModel;
 public class GameShop implements MouseListener, MouseMotionListener {
 
 	/**
-	 * 游戏主窗口
+	 * ?????????
 	 */
 	private JFrameGame mainFrame;
 
 	/**
-	 * 进入商店的玩家对象
+	 * ??????????????
 	 */
 	private PlayerModel player;
 	private JFrame frame;
 	private JPanel panel;
 	/**
 	 * 
-	 * 全局的位置变量，用于表示鼠标在窗口上的位置
+	 * ??????帽?????????????????????????
 	 * 
 	 */
 	static Point origin = new Point();
@@ -35,7 +35,7 @@ public class GameShop implements MouseListener, MouseMotionListener {
 	public GameShop(JFrameGame mainFrame, PlayerModel player) {
 		this.mainFrame = mainFrame;
 		this.player = player;
-		// 创建面板
+		// ???????
 		//createWindow();
 	}
 	public static void main(String[] args) {
@@ -44,12 +44,12 @@ public class GameShop implements MouseListener, MouseMotionListener {
 	private void createWindow() {
 		frame = new JFrame();
 		panel = new JPanel();
-		JLabel label = new JLabel("测试");
+		JLabel label = new JLabel("????");
 		panel.add(label);
 
 		frame.add(new Background(0, 0, 0, 0, null,null));
 		frame.setSize(300, 300);
-		// 设置窗口中央。
+		// ???么???????
 		frame.setLocation(
 				this.mainFrame.getX()
 						+ ((this.mainFrame.getWidth() + this.frame.getWidth()) / 2),
@@ -107,7 +107,7 @@ public class GameShop implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		origin.x = e.getX(); // 当鼠标按下的时候获得窗口当前的位置
+		origin.x = e.getX(); // ??????碌?????么??????????
 		origin.y = e.getY();
 
 	}

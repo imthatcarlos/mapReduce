@@ -18,11 +18,11 @@ public class Massage extends JPanel {
 
 	protected Image bg = new ImageIcon("images/massage/massage.png").getImage();
 
-	protected Point origin = new Point(); // 全局的位置变量，用于表示鼠标在窗口上的位置
+	protected Point origin = new Point(); // ??????帽?????????????????????????
 
 	protected int x, y, w, h;
 
-	protected String titileStr = "标题";
+	protected String titileStr = "????";
 	protected JLabel titile  = null;
 
 	protected JPanelGame panel = null;
@@ -31,20 +31,20 @@ public class Massage extends JPanel {
 	
 	/**
 	 * 
-	 * 创建一个信息对话框
+	 * ???????????????
 	 * 
 	 */
 	protected Massage(String titile,JPanelGame panel) {
 		this.titileStr = titile;
-		// 初始化位置
+		// ????????
 		initBounds();
 		setLayout(null);
-		// 增加标题
+		// ???????
 		addTitle();
-		// 增加文本域
-		// 增加监听
+		// ?????????
+		// ???????
 		addListener();
-		// 设置背景透明
+		// ???帽??????
 		setOpaque(false);
 		this.panel = panel;
 	}
@@ -56,7 +56,7 @@ public class Massage extends JPanel {
 
 	/**
 	 * 
-	 * 将窗体隐藏
+	 * ??????????
 	 * 
 	 */
 	public void moveToBack() {
@@ -65,7 +65,7 @@ public class Massage extends JPanel {
 
 	/**
 	 * 
-	 * 将窗体显现
+	 * ??????????
 	 * 
 	 */
 	public void moveToFront() {
@@ -89,13 +89,13 @@ public class Massage extends JPanel {
 
 	private void addListener() {
 		addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) { // 按下
-				origin.x = e.getX(); // 当鼠标按下的时候获得窗口当前的位置
+			public void mousePressed(MouseEvent e) { // ????
+				origin.x = e.getX(); // ??????碌?????么??????????
 				origin.y = e.getY();
 			}
 		});
 		addMouseMotionListener(new MouseMotionAdapter() {
-			public void mouseDragged(MouseEvent e) { // 拖动
+			public void mouseDragged(MouseEvent e) { // ???
 				x += e.getX() - origin.x;
 				y += e.getY() - origin.y;
 				if (x < 0) {
@@ -116,7 +116,7 @@ public class Massage extends JPanel {
 	}
 	/**
 	 * 
-	 * 按下ok按钮
+	 * ????ok???
 	 * 
 	 */
 	public void ok() {
@@ -125,7 +125,7 @@ public class Massage extends JPanel {
 	
 	/**
 	 * 
-	 * 按下cancel按钮
+	 * ????cancel???
 	 * 
 	 */
 	public void cancel() {

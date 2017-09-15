@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="com.carlos_beltran_hw1"
+		module="java-mvc-swing-monopoly"
+		revision="1.0"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
+		date="20170914220101"/>
+	<dependencies>
+		<module organisation="org.fluentd" name="fluent-logger">
+			<revision name="0.2.10" status="release" pubdate="20130710003043" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/fluent/fluent-logger-java" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3581" time="0" location="/Users/carlos/.ivy2/cache/org.fluentd/fluent-logger/ivy-0.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fluentd/fluent-logger/0.2.10/fluent-logger-0.2.10.pom"/>
+				<caller organisation="com.carlos_beltran_hw1" name="java-mvc-swing-monopoly" conf="compile" rev="0.2.10" rev-constraint-default="0.2.10" rev-constraint-dynamic="0.2.10" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="fluent-logger" type="jar" ext="jar" status="no" details="" size="18129" time="0" location="/Users/carlos/.ivy2/cache/org.fluentd/fluent-logger/jars/fluent-logger-0.2.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/fluentd/fluent-logger/0.2.10/fluent-logger-0.2.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.msgpack" name="msgpack">
+			<revision name="0.6.7" status="release" pubdate="20121208235936" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://msgpack.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3717" time="0" location="/Users/carlos/.ivy2/cache/org.msgpack/msgpack/ivy-0.6.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/msgpack/msgpack/0.6.7/msgpack-0.6.7.pom"/>
+				<caller organisation="org.fluentd" name="fluent-logger" conf="default, compile, runtime, master" rev="0.6.7" rev-constraint-default="0.6.7" rev-constraint-dynamic="0.6.7" callerrev="0.2.10"/>
+				<artifacts>
+					<artifact name="msgpack" type="bundle" ext="jar" status="no" details="" size="277931" time="0" location="/Users/carlos/.ivy2/cache/org.msgpack/msgpack/bundles/msgpack-0.6.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/msgpack/msgpack/0.6.7/msgpack-0.6.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.javassist" name="javassist">
+			<revision name="3.16.1-GA" status="release" pubdate="20120306093712" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="3196" time="0" location="/Users/carlos/.ivy2/cache/org.javassist/javassist/ivy-3.16.1-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.16.1-GA/javassist-3.16.1-GA.pom"/>
+				<caller organisation="org.msgpack" name="msgpack" conf="compile, runtime" rev="3.16.1-GA" rev-constraint-default="3.16.1-GA" rev-constraint-dynamic="3.16.1-GA" callerrev="0.6.7"/>
+				<artifacts>
+					<artifact name="javassist" type="jar" ext="jar" status="no" details="" size="659343" time="0" location="/Users/carlos/.ivy2/cache/org.javassist/javassist/jars/javassist-3.16.1-GA.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/javassist/javassist/3.16.1-GA/javassist-3.16.1-GA.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.json-simple" name="json-simple">
+			<revision name="1.1.1" status="release" pubdate="20120321001134" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/json-simple/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2986" time="0" location="/Users/carlos/.ivy2/cache/com.googlecode.json-simple/json-simple/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.pom"/>
+				<caller organisation="org.msgpack" name="msgpack" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.6.7"/>
+				<artifacts>
+					<artifact name="json-simple" type="bundle" ext="jar" status="no" details="" size="23931" time="0" location="/Users/carlos/.ivy2/cache/com.googlecode.json-simple/json-simple/bundles/json-simple-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-math3">
+			<revision name="3.1.1" status="release" pubdate="20130109101459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/math/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="8364" time="0" location="/Users/carlos/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.pom"/>
+				<caller organisation="com.carlos_beltran_hw1" name="java-mvc-swing-monopoly" conf="compile" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-math3" type="jar" ext="jar" status="no" details="" size="1599627" time="0" location="/Users/carlos/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="junit" name="junit">
+			<revision name="4.10" status="release" pubdate="20110929141223" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
+				<metadata-artifact status="no" details="" size="2897" time="0" location="/Users/carlos/.ivy2/cache/junit/junit/ivy-4.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.10/junit-4.10.pom"/>
+				<caller organisation="com.googlecode.json-simple" name="json-simple" conf="compile, runtime" rev="4.10" rev-constraint-default="4.10" rev-constraint-dynamic="4.10" callerrev="1.1.1"/>
+				<artifacts>
+					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="253160" time="0" location="/Users/carlos/.ivy2/cache/junit/junit/jars/junit-4.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/junit/junit/4.10/junit-4.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hamcrest" name="hamcrest-core">
+			<revision name="1.1" status="release" pubdate="20070718141143" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="BSD style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="4340" time="0" location="/Users/carlos/.ivy2/cache/org.hamcrest/hamcrest-core/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom"/>
+				<caller organisation="junit" name="junit" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="4.10"/>
+				<artifacts>
+					<artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="76643" time="0" location="/Users/carlos/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

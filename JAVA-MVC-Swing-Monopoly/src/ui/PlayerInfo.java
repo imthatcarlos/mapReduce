@@ -19,7 +19,7 @@ import model.PlayerModel;
 
 /**
  * 
- * 记载一个玩家面板 用于游戏结束时显示
+ * ????????????? ???????????????
  * 
  * @author MOVELIGHTS
  * 
@@ -74,7 +74,7 @@ public class PlayerInfo extends JPanel {
 
 	/**
 	 * 
-	 * 将窗体隐藏
+	 * ??????????
 	 * 
 	 */
 	public void moveToBack() {
@@ -83,7 +83,7 @@ public class PlayerInfo extends JPanel {
 
 	/**
 	 * 
-	 * 将窗体显现
+	 * ??????????
 	 * 
 	 */
 	public void moveToFront() {
@@ -91,7 +91,7 @@ public class PlayerInfo extends JPanel {
 	}
 
 	public void paint(Graphics g) {
-		this.setOpaque(false); // 背景透明
+		this.setOpaque(false); // ???????
 		g.drawImage(bg, 0, 0, w, h, this);
 		drawPlayers(g);
 		button.update(g);
@@ -105,24 +105,24 @@ public class PlayerInfo extends JPanel {
 		}
 		String str = "";
 		if (GameRunning.day >= GameRunning.GAME_DAY) {
-			str ="达到游戏天数 "+GameRunning.GAME_DAY+" 天.";
+			str ="????????? "+GameRunning.GAME_DAY+" ??.";
 		}
-		//最大金钱
+		//?????
 		PlayerModel p1 = players.get(0);
 		PlayerModel p2 = players.get(1);
 		if (GameRunning.MONEY_MAX > 0 && p1.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p1.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p1.getName() +"\" ???????????????.";
 		} else if (GameRunning.MONEY_MAX > 0 && p2.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p2.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p2.getName() +"\" ???????????????.";
 		}
-		// 破产
+		// ???
 		if (p1.getCash() < 0 ){
-			str ="\"" + p1.getName() +"\"破产.";
+			str ="\"" + p1.getName() +"\"???.";
 		} else if (p2.getCash() < 0 ){
-			str ="\"" + p2.getName() +"\"破产.";
+			str ="\"" + p2.getName() +"\"???.";
 		}
 		FontMetrics fm = g.getFontMetrics();
-		g.drawString("结束原因："+str, 200 - fm.stringWidth(str)/2, 86);
+		g.drawString("???????"+str, 200 - fm.stringWidth(str)/2, 86);
 	}
 
 	private void drawPlayer(Graphics g, PlayerModel player,int y) {
@@ -179,13 +179,13 @@ public class PlayerInfo extends JPanel {
 
 	private void addListener() {
 		addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) { // 按下
-				origin.x = e.getX(); // 当鼠标按下的时候获得窗口当前的位置
+			public void mousePressed(MouseEvent e) { // ????
+				origin.x = e.getX(); // ??????碌?????么??????????
 				origin.y = e.getY();
 			}
 		});
 		addMouseMotionListener(new MouseMotionAdapter() {
-			public void mouseDragged(MouseEvent e) { // 拖动
+			public void mouseDragged(MouseEvent e) { // ???
 				x += e.getX() - origin.x;
 				y += e.getY() - origin.y;
 				if (x < 0) {
