@@ -27,3 +27,10 @@ jps lists all running Java VM on the current system, Main being the one of inter
 
 ![Scheme](images/jps.png)
 
+jstack helps us obtain Java and native stack information from a Java process
+
+![Scheme](images/jstack.png)
+
+With jstat we diagnose performance issues related to heap sizing and garbage collection
+
+![Scheme] (images/jstat.png)
