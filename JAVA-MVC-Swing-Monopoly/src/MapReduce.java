@@ -22,7 +22,8 @@ public class MapReduce {
     public static void main(String[] args) throws IOException {
         testNameCounts = new HashMap<String, Integer>();
 
-        parseCoverageReports();
+        // Don't need this anymore...
+        //parseCoverageReports();
 
         JobConf conf = new JobConf(MapReduce.class);
 
